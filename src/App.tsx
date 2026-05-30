@@ -17,13 +17,11 @@ export default function App() {
   return (
     <div style={styles.container}>
 
-      {/* Header */}
       <header style={styles.header}>
         <h1>🎟️ TicketPromoLive</h1>
         <p>دليل الحفلات الموسيقية</p>
       </header>
 
-      {/* Search */}
       <input
         type="text"
         placeholder="ابحث عن حفلة..."
@@ -32,7 +30,6 @@ export default function App() {
         style={styles.search}
       />
 
-      {/* Events */}
       <div style={styles.grid}>
         {filtered.map((event, i) => (
           <div key={i} style={styles.card}>
@@ -42,7 +39,6 @@ export default function App() {
         ))}
       </div>
 
-      {/* Notice */}
       <div style={styles.notice}>
         <h3>⚠️ تنويه</h3>
         <p>
@@ -85,3 +81,7 @@ const styles = {
   notice: {
     marginTop: "30px",
     background: "#111",
+    padding: "15px",
+    borderRadius: "8px"
+  }
+};
