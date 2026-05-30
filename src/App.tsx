@@ -1,46 +1,45 @@
-
-
-function App() {
+export default function App() {
   return (
-    <div className="page">
-      {/* Header */}
-      <header className="header">
-        <h1 className="logo">TicketPromoLive</h1>
-      </header>
+    <div style={{ padding: "20px", fontFamily: "sans-serif", color: "#fff", background: "#0a1128" }}>
 
-      {/* Hero Section */}
-      <section className="hero">
-        <h2 className="hero-title">اكتشف أفضل الفعاليات حولك</h2>
-        <p className="hero-text">
-          TicketPromoLive هو منصة لاكتشاف الفعاليات. نحن لا نبيع التذاكر، بل نساعدك في العثور على
-          العروض والفعاليات الرسمية بسهولة.
-        </p>
+      <h1>🎟️ TicketPromoLive</h1>
+
+      <p>
+        اكتشف أفضل الفعاليات حولك بسهولة.
+      </p>
+
+      <hr />
+
+      <section>
+        <h2>🔥 أحدث الفعاليات</h2>
+        <p>تابع الحفلات، المباريات، والمهرجانات الجديدة.</p>
       </section>
 
-      {/* Features */}
-      <section className="features">
-        <div className="feature-box">
-          <h3>🎟️ اكتشف فعاليات جديدة</h3>
-          <p>تصفح أحدث الحفلات، المباريات، والمهرجانات.</p>
-        </div>
-
-        <div className="feature-box">
-          <h3>⭐ عروض حصرية</h3>
-          <p>نساعدك في العثور على أفضل العروض من المنظمين الرسميين.</p>
-        </div>
-
-        <div className="feature-box">
-          <h3>📍 حسب موقعك</h3>
-          <p>اعثر على فعاليات قريبة منك بسهولة.</p>
-        </div>
+      <section>
+        <h2>⭐ عروض حصرية</h2>
+        <p>أفضل العروض من المنظمين الرسميين.</p>
       </section>
 
-      {/* Footer */}
-      <footer className="footer">
-        <p>© 2026 TicketPromoLive — جميع الحقوق محفوظة</p>
+      <section>
+        <h2>📍 حسب موقعك</h2>
+        <p>اعثر على فعاليات قريبة منك بسهولة.</p>
+      </section>
+
+      <section>
+        <h2>📝 مقالات وشرح</h2>
+        <ul>
+          <li>أفضل الفعاليات في السعودية</li>
+          <li>كيف تحصل على تذاكر بسعر أقل</li>
+          <li>أهم المهرجانات القادمة</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <footer style={{ marginTop: "40px" }}>
+        © 2026 TicketPromoLive — جميع الحقوق محفوظة
       </footer>
+
     </div>
   );
 }
-
-export default App;
