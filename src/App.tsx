@@ -7,20 +7,30 @@ export default function App() {
     { title: "حفلة محمد عبده", city: "الرياض" },
     { title: "حفلة عمرو دياب", city: "جدة" },
     { title: "حفلة راب", city: "الرياض" },
-    { title: "حفلة غنائية حية", city: "الدمام" },
+    { title: "حفلة غنائية حية", city: "الدمام" }
   ];
 
   const filtered = events.filter((e) =>
     e.title.toLowerCase().includes(search.toLowerCase())
   );
 
+  const copyCode = () => {
+    navigator.clipboard.writeText("MD15");
+    alert("✅ تم نسخ كود الخصم");
+  };
+
   return (
     <div style={styles.container}>
-
       <header style={styles.header}>
         <h1>🎟️ TicketPromoLive</h1>
         <p>دليل الحفلات الموسيقية</p>
       </header>
+
+      <div style={styles.promo}>
+        🎉 استخدم كود الخصم:
+        <strong style={{ margin: "0 10px", color: "#00ffcc" }}>MD15</strong>
+        <button onClick={copyCode} style={styles.button}>نسخ</button>
+      </div>
 
       <input
         type="text"
@@ -45,7 +55,6 @@ export default function App() {
           نحن لسنا جهة بيع تذاكر، وإنما نقدم هذا الموقع كدليل لاكتشاف الحفلات فقط.
         </p>
       </div>
-
     </div>
   );
 }
@@ -61,6 +70,20 @@ const styles = {
   header: {
     textAlign: "center",
     marginBottom: "20px"
+  },
+  promo: {
+    background: "#111",
+    padding: "12px",
+    borderRadius: "8px",
+    textAlign: "center",
+    marginBottom: "20px"
+  },
+  button: {
+    marginLeft: "10px",
+    padding: "5px 10px",
+    borderRadius: "6px",
+    border: "none",
+    cursor: "pointer"
   },
   search: {
     width: "100%",
