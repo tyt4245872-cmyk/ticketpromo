@@ -1,44 +1,40 @@
 export default function App() {
   return (
-    <div style={{ padding: "20px", fontFamily: "sans-serif", color: "#fff", background: "#0a1128" }}>
+    <div style={{
+      fontFamily: "sans-serif",
+      color: "#fff",
+      background: "#0a1128",
+      minHeight: "100vh",
+      padding: "20px"
+    }}>
 
-      <h1>🎟️ TicketPromoLive</h1>
+      {/* Header */}
+      <header style={{ textAlign: "center", marginBottom: "30px" }}>
+        <h1>🎟️ TicketPromoLive</h1>
+        <p>اكتشف أفضل الفعاليات حولك بسهولة</p>
+      </header>
 
-      <p>
-        اكتشف أفضل الفعاليات حولك بسهولة.
-      </p>
+      {/* Search Box (مثل nofomo) */}
+      <div style={{
+        marginBottom: "30px",
+        textAlign: "center"
+      }}>
+        <input
+          placeholder="ابحث عن فعالية..."
+          style={{
+            width: "80%",
+            padding: "10px",
+            borderRadius: "8px",
+            border: "none"
+          }}
+        />
+      </div>
 
-      <hr />
+      {/* Cards */}
+      <div style={{
+        display: "grid",
+        gap: "20px"
+      }}>
 
-      <section>
-        <h2>🔥 أحدث الفعاليات</h2>
-        <p>تابع الحفلات، المباريات، والمهرجانات الجديدة.</p>
-      </section>
-
-      <section>
-        <h2>⭐ عروض حصرية</h2>
-        <p>أفضل العروض من المنظمين الرسميين.</p>
-      </section>
-
-      <section>
-        <h2>📍 حسب موقعك</h2>
-        <p>اعثر على فعاليات قريبة منك بسهولة.</p>
-      </section>
-
-      {/* ✅ التنويه الجديد */}
-      <section style={{ marginTop: "30px", background: "#111", padding: "15px", borderRadius: "8px" }}>
-        <h3>⚠️ تنويه</h3>
-        <p>
-          نحن لسنا جهة بيع تذاكر، وإنما نقدم هذا الموقع كدليل لمساعدتك في اكتشاف الفعاليات والعروض فقط.
-        </p>
-      </section>
-
-      <hr />
-
-      <footer style={{ marginTop: "40px" }}>
-        © 2026 TicketPromoLive — جميع الحقوق محفوظة
-      </footer>
-
-    </div>
-  );
-}
+        <div style={cardStyle}>
+          <h3>🎤 حفلات موسيقية</h3>
